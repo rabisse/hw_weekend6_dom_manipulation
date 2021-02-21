@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const newDrinkForm = document.querySelector('#new-drink-form')
     newDrinkForm.addEventListener('submit', handleNewDrinkSubmit)
 
+    const deleteAllDrinksButton = document.querySelector('#delete-all')
+    deleteAllDrinksButton.addEventListener('click', handleDeleteAllDrinks)
 
 })
 
@@ -37,5 +39,8 @@ const createDrinkListItem = function(form) {
     return drinkListItem
 }
 
-
+const handleDeleteAllDrinks = function(evt) {
+    const drinkList = document.querySelector('#drink-list')
+    while (drinkList.firstChild) {drinkList.removeChild(drinkList.firstChild)}
+}
 
