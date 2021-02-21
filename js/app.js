@@ -34,8 +34,7 @@ const createDrinkListItem = function(form) {
     caffeine.textContent = `Caffeine level: ${form.caffeine.value}`
     drinkListItem.appendChild(caffeine)
 
-
-
+    return drinkListItem
 }
 
 
